@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'http://thomas.proxy.rlwy.net:19023/api/students';
+const API = 'https://thomas.proxy.rlwy.net:19023/api/students';
 
 export const getAllStudents  = ()              => axios.get(API);
 export const createStudent  = (student)       => axios.post(API, student);
