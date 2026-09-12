@@ -24,7 +24,11 @@ export default function App() {
     setLoading(true);
     getAllStudents()
       .then(res  => { setStudents(res.data); setLoading(false); })
-      .catch(()  => { setError('Cannot connect to Spring Boot. Is it running on port 8080?'); setLoading(false); });
+      .catch(err => {
+        console.error('API Error:', err);
+        setError('Cannot connect to backend API. Please verify the backend service is running.');
+        setLoading(false);
+      });
   }
 
   function openAddForm() {
