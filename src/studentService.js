@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://studentmanagement-production-f1c6.up.railway.app';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://student-management-bufy.onrender.com';
 const API = `${BASE_URL.replace(/\/$/, '')}/api/students`;
 
 export const getAllStudents  = ()              => axios.get(API);
